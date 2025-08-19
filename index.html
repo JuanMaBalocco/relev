@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relevamiento de Computadoras</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container py-3">
+    <h1 class="mb-3 text-center">Relevamiento de Computadoras</h1>
+    <ul class="nav nav-tabs mb-3" id="mainTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="form-tab" data-bs-toggle="tab" data-bs-target="#formTab" type="button" role="tab">Formulario</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="relevamientos-tab" data-bs-toggle="tab" data-bs-target="#relevamientosTab" type="button" role="tab">Relevamientos</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="areas-tab" data-bs-toggle="tab" data-bs-target="#areasTab" type="button" role="tab">Áreas</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="edificios-tab" data-bs-toggle="tab" data-bs-target="#edificiosTab" type="button" role="tab">Edificios</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="mainTabsContent">
+      <div class="tab-pane fade show active" id="formTab" role="tabpanel">
+        <form id="relevForm">
+          <!-- Selectores de Edificio y Área -->
+          <div class="mb-3">
+            <label class="form-label">Edificio</label>
+            <div class="d-flex gap-2">
+              <select id="edificioSelect" class="form-select"></select>
+              <button type="button" class="btn btn-primary" id="nuevoEdificioBtn">Nuevo Edificio</button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Área</label>
+            <div class="d-flex gap-2">
+              <select id="areaSelect" class="form-select"></select>
+              <button type="button" class="btn btn-primary" id="nuevaAreaBtn">Nueva Área</button>
+            </div>
+          </div>
+          <!-- Monitor -->
+          <div class="mb-3">
+            <label class="form-label">Monitor</label>
+            <input type="text" class="form-control mb-2" id="monitorMarcaModelo" placeholder="Marca y modelo">
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="monitorEstado" id="monitorMalo" value="Malo" autocomplete="off">
+              <label class="btn btn-outline-danger" for="monitorMalo">Malo</label>
+              <input type="radio" class="btn-check" name="monitorEstado" id="monitorBueno" value="Bueno" autocomplete="off">
+              <label class="btn btn-outline-warning" for="monitorBueno">Bueno</label>
+              <input type="radio" class="btn-check" name="monitorEstado" id="monitorExcelente" value="Excelente" autocomplete="off">
+              <label class="btn btn-outline-success" for="monitorExcelente">Excelente</label>
+            </div>
+          </div>
+          <!-- Teclado -->
+          <div class="mb-3">
+            <label class="form-label">Teclado</label>
+            <input type="text" class="form-control mb-2" id="tecladoMarca" placeholder="Marca">
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="tecladoEstado" id="tecladoMalo" value="Malo" autocomplete="off">
+              <label class="btn btn-outline-danger" for="tecladoMalo">Malo</label>
+              <input type="radio" class="btn-check" name="tecladoEstado" id="tecladoBueno" value="Bueno" autocomplete="off">
+              <label class="btn btn-outline-warning" for="tecladoBueno">Bueno</label>
+              <input type="radio" class="btn-check" name="tecladoEstado" id="tecladoExcelente" value="Excelente" autocomplete="off">
+              <label class="btn btn-outline-success" for="tecladoExcelente">Excelente</label>
+            </div>
+          </div>
+          <!-- Mouse -->
+          <div class="mb-3">
+            <label class="form-label">Mouse</label>
+            <input type="text" class="form-control mb-2" id="mouseMarca" placeholder="Marca">
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="mouseEstado" id="mouseMalo" value="Malo" autocomplete="off">
+              <label class="btn btn-outline-danger" for="mouseMalo">Malo</label>
+              <input type="radio" class="btn-check" name="mouseEstado" id="mouseBueno" value="Bueno" autocomplete="off">
+              <label class="btn btn-outline-warning" for="mouseBueno">Bueno</label>
+              <input type="radio" class="btn-check" name="mouseEstado" id="mouseExcelente" value="Excelente" autocomplete="off">
+              <label class="btn btn-outline-success" for="mouseExcelente">Excelente</label>
+            </div>
+          </div>
+          <!-- Placa Madre y Procesador -->
+          <div class="mb-3">
+            <label class="form-label">Placa Madre</label>
+            <input type="text" class="form-control" id="placaMadreMarca" placeholder="Marca">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Procesador</label>
+            <input type="text" class="form-control" id="procesadorModelo" placeholder="Modelo">
+          </div>
+          <!-- Memoria RAM -->
+          <div class="mb-3">
+            <label class="form-label">Memoria RAM (en GB)</label>
+            <input type="number" class="form-control mb-2" id="ramCantidad" placeholder="Cantidad en GB">
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="ramTipo" id="ramDDR2" value="DDR2" autocomplete="off">
+              <label class="btn btn-outline-primary" for="ramDDR2">DDR2</label>
+              <input type="radio" class="btn-check" name="ramTipo" id="ramDDR3" value="DDR3" autocomplete="off">
+              <label class="btn btn-outline-primary" for="ramDDR3">DDR3</label>
+              <input type="radio" class="btn-check" name="ramTipo" id="ramDDR4" value="DDR4" autocomplete="off">
+              <label class="btn btn-outline-primary" for="ramDDR4">DDR4</label>
+            </div>
+          </div>
+          <!-- Disco -->
+          <div class="mb-3">
+            <label class="form-label">Disco (en GB)</label>
+            <input type="number" class="form-control mb-2" id="discoCantidad" placeholder="Cantidad en GB">
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="discoTipo" id="discoHDD" value="HDD" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="discoHDD">HDD</label>
+              <input type="radio" class="btn-check" name="discoTipo" id="discoSSD" value="SSD" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="discoSSD">SSD</label>
+              <input type="radio" class="btn-check" name="discoTipo" id="discoNVME" value="NVME" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="discoNVME">NVME</label>
+            </div>
+          </div>
+          <!-- Sistema Operativo -->
+          <div class="mb-3">
+            <label class="form-label">Sistema Operativo</label>
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="soTipo" id="soWinXP" value="WinXP" autocomplete="off">
+              <label class="btn btn-outline-info" for="soWinXP">WinXP</label>
+              <input type="radio" class="btn-check" name="soTipo" id="soWin7" value="Win7" autocomplete="off">
+              <label class="btn btn-outline-info" for="soWin7">Win7</label>
+              <input type="radio" class="btn-check" name="soTipo" id="soWin10" value="Win10" autocomplete="off">
+              <label class="btn btn-outline-info" for="soWin10">Win10</label>
+              <input type="radio" class="btn-check" name="soTipo" id="soWin11" value="Win11" autocomplete="off">
+              <label class="btn btn-outline-info" for="soWin11">Win11</label>
+              <input type="radio" class="btn-check" name="soTipo" id="soOtro" value="Otro" autocomplete="off">
+              <label class="btn btn-outline-info" for="soOtro">Otro</label>
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <div class="mb-3">
+              <label class="form-label">Observaciones</label>
+              <textarea class="form-control" id="observaciones" rows="2" placeholder="Observaciones adicionales"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar relevamiento</button>
+          </div>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="relevamientosTab" role="tabpanel">
+        <div id="vistaRelevamientos"></div>
+      </div>
+      <div class="tab-pane fade" id="areasTab" role="tabpanel">
+        <div id="vistaAreas"></div>
+      </div>
+      <div class="tab-pane fade" id="edificiosTab" role="tabpanel">
+        <div id="vistaEdificios"></div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="sweetalert2/sweetalert2.all.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

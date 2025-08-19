@@ -1,0 +1,57 @@
+[
+    {
+        "edificio": "Anexo",
+        "area": "Sistemas",
+        "monitor": {
+            "marcaModelo": "hikvision",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "genius",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "genius",
+            "estado": "Bueno"
+        },
+        "placaMadre": "no se",
+        "procesador": "Xeon 5",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1024",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Sistemas",
+        "monitor": {
+            "marcaModelo": "",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "",
+            "estado": "Bueno"
+        },
+        "placaMadre": "no se",
+        "procesador": "intel i7",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "320",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "no tiene datos, anda con wifi unicamente"
+    }
+]

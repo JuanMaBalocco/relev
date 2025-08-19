@@ -1,0 +1,9 @@
+body { background: #f8f9fa; }
+.container { max-width: 500px; }
+.btn-group .btn { font-size: 0.95rem; }
+input, select, label { font-size: 1rem; }
+@media (max-width: 600px) {
+  .container { max-width: 100%; padding: 0 5px; }
+  h1 { font-size: 1.3rem; }
+  .btn, .form-control, .form-select { font-size: 1rem; }
+}

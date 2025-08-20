@@ -125,6 +125,31 @@
               <label class="btn btn-outline-success" for="discoExcelente">Excelente</label>
             </div>
           </div>
+
+          <!-- Red / Internet -->
+          <div class="mb-3">
+            <label class="form-label">Red / Internet</label>
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="redInternet" id="redLocal" value="Local" autocomplete="off">
+              <label class="btn btn-outline-primary" for="redLocal">Solo Local</label>
+              <input type="radio" class="btn-check" name="redInternet" id="redInternetLocal" value="Internet + Local" autocomplete="off">
+              <label class="btn btn-outline-primary" for="redInternetLocal">Ethernet + Local</label>
+              <input type="radio" class="btn-check" name="redInternet" id="redInternetSolo" value="Internet" autocomplete="off">
+              <label class="btn btn-outline-primary" for="redInternetSolo">Ethernet</label>
+              <input type="radio" class="btn-check" name="redInternet" id="redWifi" value="Wifi" autocomplete="off">
+              <label class="btn btn-outline-primary" for="redWifi">Wifi</label>
+              <input type="radio" class="btn-check" name="redInternet" id="redNA" value="N/A" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="redNA">N/A</label>
+            </div>
+          </div>
+
+          <!-- IP Estática -->
+          <div class="mb-3">
+            <label class="form-label">IP Estática</label>
+            <input type="text" class="form-control" id="ipEstatica" placeholder="Ej: 192.168.1.100" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" inputmode="numeric">
+            <div class="form-text">Solo números y puntos. Ejemplo: 192.168.1.100</div>
+          </div>
+
           <!-- Sistema Operativo -->
           <div class="mb-3">
             <label class="form-label">Sistema Operativo</label>

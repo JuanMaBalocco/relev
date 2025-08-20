@@ -128,6 +128,8 @@ if (relevForm) relevForm.addEventListener('submit', function(e) {
       tipo: document.querySelector('input[name="discoTipo"]:checked')?.value || "",
       estado: document.querySelector('input[name="discoEstado"]:checked')?.value || ""
     },
+    redInternet: document.querySelector('input[name="redInternet"]:checked')?.value || "",
+    ipEstatica: document.getElementById('ipEstatica')?.value || "",
     sistemaOperativo: document.querySelector('input[name="soTipo"]:checked')?.value || "",
     observaciones: document.getElementById('observaciones').value
   };
@@ -184,6 +186,8 @@ function renderVistaRelevamientos() {
                 <b>Mouse:</b> ${r.mouse.marca} (${r.mouse.estado})<br>
                 <b>Placa Madre:</b> ${r.placaMadre}<br>
                 <b>Disco:</b> ${r.disco.cantidad}GB (${r.disco.tipo}) (${r.disco.estado})<br>
+                <b>Red / Internet:</b> ${r.redInternet || ''}<br>
+                <b>IP Estática:</b> ${r.ipEstatica || ''}<br>
                 <b>SO:</b> ${r.sistemaOperativo}<br>
                 <b>Observaciones:</b> ${r.observaciones ? r.observaciones : ''}<br>
               </div>

@@ -168,22 +168,29 @@ function renderVistaRelevamientos() {
   Object.keys(agrupado).forEach(edif => {
     html += `<h5 class='mt-3 text-primary'>${edif}</h5>`;
     Object.keys(agrupado[edif]).forEach(area => {
-      html += `<h6 class='text-secondary'>${area}</h6><ul class='list-group mb-2'>`;
+      html += `<h6 class='text-secondary'>${area}</h6><div class='row mb-2'>`;
       agrupado[edif][area].forEach((r, idx) => {
-        html += `<li class='list-group-item'>
-          <b>Monitor:</b> ${r.monitor.marcaModelo} (${r.monitor.estado})<br>
-          <b>Teclado:</b> ${r.teclado.marca} (${r.teclado.estado})<br>
-          <b>Mouse:</b> ${r.mouse.marca} (${r.mouse.estado})<br>
-          <b>Placa Madre:</b> ${r.placaMadre}<br>
-          <b>Procesador:</b> ${r.procesador}<br>
-          <b>RAM:</b> ${r.ram.cantidad}GB (${r.ram.tipo})<br>
-          <b>Disco:</b> ${r.disco.cantidad}GB (${r.disco.tipo})<br>
-          <b>SO:</b> ${r.sistemaOperativo}<br>
-          <b>Observaciones:</b> ${r.observaciones ? r.observaciones : ''}<br>
-          <button class='btn btn-sm btn-danger mt-2' onclick='eliminarRelevamiento(${idx}, "${edif}", "${area}")'>Eliminar</button>
-        </li>`;
+        const cardId = `detalles-${edif}-${area}-${idx}`;
+        html += `<div class='col-md-6 mb-2'>
+          <div class='card'>
+            <div class='card-body'>
+              <h6 class='card-title mb-2'>${r.procesador} / ${r.ram.cantidad}GB ${r.ram.tipo}</h6>
+              <button class='btn btn-sm btn-info mb-2' type='button' onclick="document.getElementById('${cardId}').classList.toggle('d-none')">Ver Detalles</button>
+              <button class='btn btn-sm btn-danger mb-2 float-end' onclick='eliminarRelevamiento(${idx}, "${edif}", "${area}")'>Eliminar</button>
+              <div id='${cardId}' class='mt-2 d-none'>
+                <b>Monitor:</b> ${r.monitor.marcaModelo} (${r.monitor.estado})<br>
+                <b>Teclado:</b> ${r.teclado.marca} (${r.teclado.estado})<br>
+                <b>Mouse:</b> ${r.mouse.marca} (${r.mouse.estado})<br>
+                <b>Placa Madre:</b> ${r.placaMadre}<br>
+                <b>Disco:</b> ${r.disco.cantidad}GB (${r.disco.tipo})<br>
+                <b>SO:</b> ${r.sistemaOperativo}<br>
+                <b>Observaciones:</b> ${r.observaciones ? r.observaciones : ''}<br>
+              </div>
+            </div>
+          </div>
+        </div>`;
       });
-      html += `</ul>`;
+      html += `</div>`;
     });
   });
   cont.innerHTML = html || '<p>No hay relevamientos guardados.</p>';

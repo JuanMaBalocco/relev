@@ -30,28 +30,1204 @@
         "edificio": "Anexo",
         "area": "Sistemas",
         "monitor": {
-            "marcaModelo": "",
-            "estado": "Bueno"
+            "marcaModelo": "Bangho 19 pulgadas",
+            "estado": "Malo"
         },
         "teclado": {
-            "marca": "",
-            "estado": "Bueno"
+            "marca": "Usb",
+            "estado": "Malo"
         },
         "mouse": {
-            "marca": "",
-            "estado": "Bueno"
+            "marca": "Usb",
+            "estado": "Malo"
         },
-        "placaMadre": "no se",
-        "procesador": "intel i7",
+        "placaMadre": "Gigabyte h510m",
+        "procesador": "i5 10400",
         "ram": {
             "cantidad": "8",
-            "tipo": "DDR3"
+            "tipo": "DDR4"
         },
         "disco": {
-            "cantidad": "320",
+            "cantidad": "240",
             "tipo": "SSD"
         },
         "sistemaOperativo": "Win10",
-        "observaciones": "no tiene datos, anda con wifi unicamente"
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Liquidacion",
+        "monitor": {
+            "marcaModelo": "Philips 19 pulgadas",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "ASUS H81",
+        "procesador": "INTEL I7 4790",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rentas",
+        "monitor": {
+            "marcaModelo": "Philips 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "ASUS A320M",
+        "procesador": "AMD RYZEN 3 2200",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rentas",
+        "monitor": {
+            "marcaModelo": "LG 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "GIGABYTE H81M",
+        "procesador": "INTEL I3 4700",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rentas",
+        "monitor": {
+            "marcaModelo": "LG 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "MSI ",
+        "procesador": "AMD A6",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rentas",
+        "monitor": {
+            "marcaModelo": "PHILIPS 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H310M PRO VH Plus",
+        "procesador": "INTEL I3 8va",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rentas",
+        "monitor": {
+            "marcaModelo": "SAMSUN 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "ASUS H81M",
+        "procesador": "INTEL I7 4790",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win7",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Secretaria Hacienda",
+        "monitor": {
+            "marcaModelo": "DAEWOO 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H510M",
+        "procesador": "Intel i5 10400",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Secretaria Hacienda",
+        "monitor": {
+            "marcaModelo": "Philips 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "GIGABYTE H410",
+        "procesador": "Intel i3 10100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "Daewoo 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H510M",
+        "procesador": "Celeron g5925",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "LG 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M ",
+        "procesador": "Intel i7 4700",
+        "ram": {
+            "cantidad": "16",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "CX 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M",
+        "procesador": "Intel i3 4100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "HP 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H410M",
+        "procesador": "Intel celeron g58905",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "HP 19",
+            "estado": ""
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M",
+        "procesador": "Intel pentium g3250",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "HP 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "A68HM",
+        "procesador": "AMD A6 ",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "Philips",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "Asrock h81m",
+        "procesador": "Intel pentium g3220",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Tesoreria",
+        "monitor": {
+            "marcaModelo": "Lenovo",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "placaMadre": "H61M",
+        "procesador": "Intel pentium g2020",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Instrumento legal",
+        "monitor": {
+            "marcaModelo": "Exo 24",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H410M",
+        "procesador": "Intel i3 10105",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win11",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Instrumento legal",
+        "monitor": {
+            "marcaModelo": "LG 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H61M",
+        "procesador": "Intel pentium g2030",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Instrumento legal",
+        "monitor": {
+            "marcaModelo": "Samsung 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H61M",
+        "procesador": "Intel core i3 3200",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "LG 24",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H310M",
+        "procesador": "Intel celeron g4930",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "Lg 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M",
+        "procesador": "Intel i3 4100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "Benq 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H61m",
+        "procesador": "Intel i3 4100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Mal funcionamiento de disco. Demasiado lenta"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "Benq 15",
+            "estado": "Malo"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "placaMadre": "H410M",
+        "procesador": "Intel i310100",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Disco mal estado. Funciona mal"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "AOC 15 TUBO RAYOS CAT",
+            "estado": "Malo"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "placaMadre": "H61m",
+        "procesador": "I3 celeron",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Mal funcionamiento. Demasiado lenta"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "CX 19",
+            "estado": "Malo"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H410m",
+        "procesador": "Intel i3 10100",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Mal funcionamiento de disco"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "All in One",
+            "estado": "Malo"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H61M",
+        "procesador": "Intel i3 3200",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "Netsys 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "placaMadre": "H55M",
+        "procesador": "Intel i5 650",
+        "ram": {
+            "cantidad": "2",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Mal funcionamiento"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Auditoria",
+        "monitor": {
+            "marcaModelo": "Lenovo 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M",
+        "procesador": "Intel pentium g3250",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Direccion de Gestion y Costo",
+        "monitor": {
+            "marcaModelo": "Samsung 15 tubo de rayos cat",
+            "estado": "Malo"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "FM2AM4",
+        "procesador": "AMD A4 4000",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Monitor cambiar urgente"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Direccion de Gestion y Costo",
+        "monitor": {
+            "marcaModelo": "Hitachi 19",
+            "estado": "Malo"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "B560M",
+        "procesador": "I5 10400",
+        "ram": {
+            "cantidad": "8",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rendicion de Cuentas",
+        "monitor": {
+            "marcaModelo": "CX 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "placaMadre": "H110M",
+        "procesador": "Intel i3 7100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win7",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rendicion de Cuentas",
+        "monitor": {
+            "marcaModelo": "CX 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M",
+        "procesador": "Intel pentium g3250",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win7",
+        "observaciones": "Mal funcionamiento"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rendicion de Cuentas",
+        "monitor": {
+            "marcaModelo": "Samsung 24",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "Gigabyte",
+        "procesador": "Intel i3 4100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "500",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win7",
+        "observaciones": "Mal funcionamiento. Disco lleno"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Rendicion de Cuentas",
+        "monitor": {
+            "marcaModelo": "Bangho 19",
+            "estado": "Bueno"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81M",
+        "procesador": "Intel i3 4100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "160",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": "Cambiar disco"
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Lenovo 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "placaMadre": "H310M",
+        "procesador": "Intel i5 8400",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Philips 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H110M",
+        "procesador": "Intel i3 7100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Exo 24",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "H81H3",
+        "procesador": "Intel i3 4100",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "LG 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "Am1m",
+        "procesador": "Sempron 2650",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Philips 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "placaMadre": "MSI",
+        "procesador": "A6 7480",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Philips 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": ""
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Malo"
+        },
+        "placaMadre": "Msi",
+        "procesador": "Intel i7 7700",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR3"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Lenovo 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Bueno"
+        },
+        "placaMadre": "A320M",
+        "procesador": "AMD RYZEN 3 3200",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "240",
+            "tipo": "SSD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
+    },
+    {
+        "edificio": "Anexo",
+        "area": "Licitacion y Compras",
+        "monitor": {
+            "marcaModelo": "Lenovo 19",
+            "estado": "Excelente"
+        },
+        "teclado": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "mouse": {
+            "marca": "Usb",
+            "estado": "Excelente"
+        },
+        "placaMadre": "Msi",
+        "procesador": "Intel i7 7700",
+        "ram": {
+            "cantidad": "4",
+            "tipo": "DDR4"
+        },
+        "disco": {
+            "cantidad": "1000",
+            "tipo": "HDD"
+        },
+        "sistemaOperativo": "Win10",
+        "observaciones": ""
     }
 ]

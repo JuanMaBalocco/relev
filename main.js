@@ -23,10 +23,10 @@ let claveAdmin = "";
 
 // Consultar config y datos desde la API
 function cargarDatos() {
-  fetch('config.json').then(r => r.json()).then(cfg => { claveAdmin = cfg.claveAdmin; });
-  fetch('api.php?action=get&type=edificios').then(r => r.json()).then(arr => { edificios = arr; actualizarSelectores(); renderVistaEdificios(); });
-  fetch('api.php?action=get&type=areas').then(r => r.json()).then(arr => { areas = arr; actualizarSelectores(); renderVistaAreas(); });
-  fetch('api.php?action=get&type=relevamientos').then(r => r.json()).then(arr => { relevamientos = arr; renderVistaRelevamientos(); });
+  fetch('config.json?t=' + Date.now()).then(r => r.json()).then(cfg => { claveAdmin = cfg.claveAdmin; });
+  fetch('api.php?action=get&type=edificios&t=' + Date.now()).then(r => r.json()).then(arr => { edificios = arr; actualizarSelectores(); renderVistaEdificios(); });
+  fetch('api.php?action=get&type=areas&t=' + Date.now()).then(r => r.json()).then(arr => { areas = arr; actualizarSelectores(); renderVistaAreas(); });
+  fetch('api.php?action=get&type=relevamientos&t=' + Date.now()).then(r => r.json()).then(arr => { relevamientos = arr; renderVistaRelevamientos(); });
 }
 cargarDatos();
 

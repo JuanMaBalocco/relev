@@ -151,6 +151,89 @@ if (relevForm) relevForm.addEventListener('submit', function(e) {
 });
 
 // Descargar JSON
+window.editarRelevamiento = function(idx, edif, area) {
+  // Buscar el relevamiento correcto
+  let i = 0;
+  let relev = null;
+  let globalIdx = -1;
+  for (let j = 0; j < relevamientos.length; j++) {
+    if (relevamientos[j].edificio === edif && relevamientos[j].area === area) {
+      if (i === idx) {
+        relev = relevamientos[j];
+        globalIdx = j;
+        break;
+      }
+      i++;
+    }
+  }
+  if (!relev) return;
+
+  // Crear el formulario HTML para el modal con selectores y opción de agregar nuevo
+  let edificiosOptions = edificios.map(e => `<option value='${e}'${e === relev.edificio ? ' selected' : ''}>${e}</option>`).join('');
+  let areasOptions = areas.map(a => `<option value='${a}'${a === relev.area ? ' selected' : ''}>${a}</option>`).join('');
+  let formHtml = `<div class='text-start'>
+    <label>Edificio</label>
+    <div class='d-flex mb-2'>
+      <select id='editEdificio' class='form-select'>${edificiosOptions}</select>
+      <button type='button' class='btn btn-primary ms-2' id='addEdificioEditBtn'>+</button>
+    </div>
+    <label>Área</label>
+    <div class='d-flex mb-2'>
+      <select id='editArea' class='form-select'>${areasOptions}</select>
+      <button type='button' class='btn btn-primary ms-2' id='addAreaEditBtn'>+</button>
+    </div>
+    <label>Procesador</label><input id='editProcesador' class='form-control mb-2' value='${relev.procesador}'>
+    <label>RAM (GB)</label><input id='editRamCantidad' type='number' class='form-control mb-2' value='${relev.ram.cantidad}'>
+    <label>RAM Tipo</label><input id='editRamTipo' class='form-control mb-2' value='${relev.ram.tipo}'>
+    <label>IP Estática</label><input id='editIpEstatica' class='form-control mb-2' value='${relev.ipEstatica || ''}'>
+    <label>Observaciones</label><textarea id='editObservaciones' class='form-control mb-2'>${relev.observaciones || ''}</textarea>
+  </div>`;
+
+  Swal.fire({
+    title: 'Editar PC',
+    html: formHtml,
+    showCancelButton: true,
+    confirmButtonText: 'Guardar',
+    cancelButtonText: 'Cancelar',
+    preConfirm: () => {
+      return {
+        edificio: document.getElementById('editEdificio').value,
+        area: document.getElementById('editArea').value,
+        procesador: document.getElementById('editProcesador').value,
+        ram: {
+          cantidad: document.getElementById('editRamCantidad').value,
+          tipo: document.getElementById('editRamTipo').value
+        },
+        ipEstatica: document.getElementById('editIpEstatica').value,
+        observaciones: document.getElementById('editObservaciones').value
+      };
+    }
+  }).then(result => {
+    if (result.isConfirmed && globalIdx >= 0) {
+      // Actualizar el relevamiento en memoria
+      relevamientos[globalIdx] = {
+        ...relevamientos[globalIdx],
+        ...result.value
+      };
+      // Enviar a la API para guardar
+      fetch('api.php?action=edit_relevamiento', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'idx=' + globalIdx + '&data=' + encodeURIComponent(JSON.stringify(relevamientos[globalIdx]))
+      })
+      .then(r => r.json())
+      .then(resp => {
+        if (resp.ok) {
+          relevamientos = resp.relevamientos;
+          renderVistaRelevamientos();
+          Swal.fire('Editado', 'Relevamiento editado correctamente.', 'success');
+        } else {
+          Swal.fire('Error', 'No se pudo editar.', 'error');
+        }
+      });
+    }
+  });
+}
 const descargarJsonBtn = document.getElementById('descargarJsonBtn');
 if (descargarJsonBtn) descargarJsonBtn.addEventListener('click', () => {
   guardarArchivo('relevamientos.json');
@@ -190,8 +273,9 @@ function renderVistaRelevamientos() {
           <div class='card'>
             <div class='card-body'>
               <h6 class='card-title mb-2'>${r.procesador} / ${r.ram.cantidad}GB ${r.ram.tipo}</h6>
-              <button class='btn btn-sm btn-info mb-2' type='button' onclick="document.getElementById('${cardId}').classList.toggle('d-none')">Ver Detalles</button>
-              <button class='btn btn-sm btn-danger mb-2 float-end' onclick='eliminarRelevamiento(${idx}, "${edif}", "${area}")'>Eliminar</button>
+                <button class='btn btn-sm btn-info mb-2' type='button' onclick="document.getElementById('${cardId}').classList.toggle('d-none')">Ver Detalles</button>
+                <button class='btn btn-sm btn-warning mb-2 ms-2' onclick='editarRelevamiento(${idx}, "${edif}", "${area}")'>Editar</button>
+                <button class='btn btn-sm btn-danger mb-2 float-end' onclick='eliminarRelevamiento(${idx}, "${edif}", "${area}")'>Eliminar</button>
               <div id='${cardId}' class='mt-2 d-none'>
                 <b>Monitor:</b> ${r.monitor.marcaModelo} (${r.monitor.estado})<br>
                 <b>Teclado:</b> ${r.teclado.marca} (${r.teclado.estado})<br>
@@ -248,6 +332,7 @@ function renderVistaAreas() {
   const cont = document.getElementById('vistaAreas');
   if (!cont) return;
   let html = '<button class="btn btn-primary mb-2" onclick="guardarArchivo(\'areas.json\')">Descargar áreas.json</button>';
+  html += '<button class="btn btn-success mb-2 ms-2" onclick="crearAreaModal()">Crear Área</button>';
   html += '<ul class="list-group">';
   areas.forEach((a, idx) => {
     html += `<li class='list-group-item d-flex justify-content-between align-items-center'>${a}
@@ -294,6 +379,60 @@ function renderVistaEdificios() {
   const cont = document.getElementById('vistaEdificios');
   if (!cont) return;
   let html = '<button class="btn btn-primary mb-2" onclick="guardarArchivo(\'edificios.json\')">Descargar edificios.json</button>';
+  html += '<button class="btn btn-success mb-2 ms-2" onclick="crearEdificioModal()">Crear Edificio</button>';
+window.crearAreaModal = function() {
+  Swal.fire({
+    title: 'Nueva Área',
+    input: 'text',
+    inputLabel: 'Nombre del área',
+    showCancelButton: true,
+    confirmButtonText: 'Agregar',
+    cancelButtonText: 'Cancelar',
+  }).then(result => {
+    if (result.isConfirmed && result.value) {
+      fetch('api.php?action=add_area', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'nombre=' + encodeURIComponent(result.value)
+      })
+      .then(r => r.json())
+      .then(resp => {
+        if (resp.ok) {
+          areas = resp.areas;
+          actualizarSelectores();
+          renderVistaAreas();
+        }
+      });
+    }
+  });
+}
+
+window.crearEdificioModal = function() {
+  Swal.fire({
+    title: 'Nuevo Edificio',
+    input: 'text',
+    inputLabel: 'Nombre del edificio',
+    showCancelButton: true,
+    confirmButtonText: 'Agregar',
+    cancelButtonText: 'Cancelar',
+  }).then(result => {
+    if (result.isConfirmed && result.value) {
+      fetch('api.php?action=add_edificio', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'nombre=' + encodeURIComponent(result.value)
+      })
+      .then(r => r.json())
+      .then(resp => {
+        if (resp.ok) {
+          edificios = resp.edificios;
+          actualizarSelectores();
+          renderVistaEdificios();
+        }
+      });
+    }
+  });
+}
   html += '<ul class="list-group">';
   edificios.forEach((e, idx) => {
     html += `<li class='list-group-item d-flex justify-content-between align-items-center'>${e}

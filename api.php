@@ -14,6 +14,18 @@ function saveJson($file, $data) {
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 
 switch ($action) {
+    case 'edit_relevamiento':
+        $idx = intval($_POST['idx'] ?? -1);
+        $data = json_decode($_POST['data'] ?? '', true);
+        if ($idx >= 0 && $data) {
+            $relevamientos = getJson('relevamientos.json');
+            $relevamientos[$idx] = $data;
+            saveJson('relevamientos.json', $relevamientos);
+            echo json_encode(['ok' => true, 'relevamientos' => $relevamientos]);
+        } else {
+            echo json_encode(['ok' => false]);
+        }
+        break;
     case 'get':
         $type = $_GET['type'] ?? '';
         if ($type === 'areas') {

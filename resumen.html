@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumen de Relevamientos</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container py-2 px-2">
+    <h2 class="mb-3 text-center">Resumen de Relevamientos</h2>
+    <div class="mb-4 d-flex flex-column align-items-center">
+      <div class="w-100" style="max-width:400px;">
+        <canvas id="chartAreas" style="width:100%;height:260px;"></canvas>
+        <div id="legendAreas" class="mt-2"></div>
+      </div>
+    </div>
+    <div class="mb-4 d-flex flex-column align-items-center">
+      <div class="w-100" style="max-width:400px;">
+        <canvas id="chartEdificios" style="width:100%;height:260px;"></canvas>
+        <div id="legendEdificios" class="mt-2"></div>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="index.html" class="btn btn-secondary btn-lg w-100">Volver al inicio</a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Obtener datos y renderizar gráficos
+    fetch('api.php?action=get&type=relevamientos&t=' + Date.now())
+      .then(r => r.json())
+      .then(relevamientos => {
+        // PCs por área
+        const areaCounts = {};
+        const edificioCounts = {};
+        relevamientos.forEach(r => {
+          areaCounts[r.area] = (areaCounts[r.area] || 0) + 1;
+          edificioCounts[r.edificio] = (edificioCounts[r.edificio] || 0) + 1;
+        });
+        // Helper para labels con porcentaje y total
+        function makeLabels(keys, values) {
+          const total = values.reduce((a,b) => a+b, 0);
+          return keys.map((k, i) => {
+            const val = values[i];
+            const pct = total ? Math.round(val/total*100) : 0;
+            return { label: k, value: val, pct: pct };
+          });
+        }
+        const colors = [
+          '#007bff','#28a745','#ffc107','#dc3545','#17a2b8','#6c757d','#6610f2','#fd7e14'
+        ];
+        // Gráfico de torta por área
+        const areaLabels = makeLabels(Object.keys(areaCounts), Object.values(areaCounts));
+        new Chart(document.getElementById('chartAreas'), {
+          type: 'pie',
+          data: {
+            labels: areaLabels.map(l => `${l.label}: ${l.value} (${l.pct}%)`),
+            datasets: [{
+              data: Object.values(areaCounts),
+              backgroundColor: colors
+            }]
+          },
+          options: {
+            plugins: { legend: { display: false } },
+            title: { display: true, text: 'Cantidad de PCs por Área' }
+          }
+        });
+        // Leyenda personalizada áreas
+        let legendHtml = '<div class="row">';
+        areaLabels.forEach((l, i) => {
+          if (i % 2 === 0 && i !== 0) legendHtml += '</div><div class="row">';
+          legendHtml += `<div class="col-12 col-md-6 d-flex align-items-center mb-1">
+            <span style="display:inline-block;width:18px;height:18px;background:${colors[i%colors.length]};border-radius:3px;margin-right:8px;"></span>
+            <span>${l.label}: <b>${l.value}</b> (${l.pct}%)</span>
+          </div>`;
+        });
+        legendHtml += '</div>';
+        document.getElementById('legendAreas').innerHTML = legendHtml;
+
+        // Gráfico de torta por edificio
+        const edificioLabels = makeLabels(Object.keys(edificioCounts), Object.values(edificioCounts));
+        new Chart(document.getElementById('chartEdificios'), {
+          type: 'pie',
+          data: {
+            labels: edificioLabels.map(l => `${l.label}: ${l.value} (${l.pct}%)`),
+            datasets: [{
+              data: Object.values(edificioCounts),
+              backgroundColor: colors
+            }]
+          },
+          options: {
+            plugins: { legend: { display: false } },
+            title: { display: true, text: 'Cantidad de PCs por Edificio' }
+          }
+        });
+        // Leyenda personalizada edificios
+        let legendHtml2 = '<div class="row">';
+        edificioLabels.forEach((l, i) => {
+          if (i % 2 === 0 && i !== 0) legendHtml2 += '</div><div class="row">';
+          legendHtml2 += `<div class="col-12 col-md-6 d-flex align-items-center mb-1">
+            <span style="display:inline-block;width:18px;height:18px;background:${colors[i%colors.length]};border-radius:3px;margin-right:8px;"></span>
+            <span>${l.label}: <b>${l.value}</b> (${l.pct}%)</span>
+          </div>`;
+        });
+        legendHtml2 += '</div>';
+        document.getElementById('legendEdificios').innerHTML = legendHtml2;
+      });
+  </script>
+</body>
+</html>

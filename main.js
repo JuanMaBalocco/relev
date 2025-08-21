@@ -169,9 +169,21 @@ function renderVistaRelevamientos() {
     agrupado[r.edificio][r.area].push(r);
   });
   Object.keys(agrupado).forEach(edif => {
-    html += `<h5 class='mt-3 text-primary'>${edif}</h5>`;
-    Object.keys(agrupado[edif]).forEach(area => {
-      html += `<h6 class='text-secondary'>${area}</h6><div class='row mb-2'>`;
+    const areasEdif = Object.keys(agrupado[edif]);
+    const totalAreas = areasEdif.length;
+    let totalPCsEdif = 0;
+    areasEdif.forEach(area => {
+      totalPCsEdif += agrupado[edif][area].length;
+    });
+    html += `<h5 class='mt-3 text-primary'>${edif} <span class='badge bg-info ms-2'>Áreas: ${totalAreas}</span> <span class='badge bg-success ms-2'>PCs: ${totalPCsEdif}</span></h5>`;
+    areasEdif.forEach(area => {
+      const totalPCsArea = agrupado[edif][area].length;
+      const areaId = `area-${edif}-${area}`;
+      html += `<div class='my-4 bg-white rounded shadow-sm p-3'>`;
+      html += `<h6 class='text-secondary d-flex align-items-center'>${area} <span class='badge bg-success ms-2'>PCs: ${totalPCsArea}</span>
+        <button class='btn btn-sm btn-outline-info ms-2' type='button' onclick="document.getElementById('${areaId}').classList.toggle('d-none')">Mostrar/Ocultar PCs</button>
+      </h6>`;
+      html += `<div id='${areaId}' class='row mb-4 mt-4 d-none'>`;
       agrupado[edif][area].forEach((r, idx) => {
         const cardId = `detalles-${edif}-${area}-${idx}`;
         html += `<div class='col-md-6 mb-2'>
@@ -195,6 +207,7 @@ function renderVistaRelevamientos() {
           </div>
         </div>`;
       });
+      html += `</div>`;
       html += `</div>`;
     });
   });
